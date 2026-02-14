@@ -200,43 +200,35 @@
 </section>
 
         <!-- Section 3: 6 Functional Elements (Interactive) -->
-        <section>
-            <div class="mb-8 text-center md:text-left">
-                <h2 class="text-3xl font-bold text-slate-800 mb-4 border-l-4 border-teal-500 pl-4">3. 신체 기능의 6가지 기둥</h2>
-                <p class="text-slate-600 text-lg">
-                    Kisner & Colby는 신체 기능을 6가지 요소의 상호작용으로 설명합니다. 아래 <strong>레이더 차트</strong>는 완전한 기능을 갖춘 이상적인 상태를 시각화한 것입니다. 차트의 각 꼭짓점을 클릭하여 각 요소의 상세 정의를 확인하세요.
+<section>
+    <div class="mb-6 text-center md:text-left">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-2 border-l-4 border-teal-500 pl-4">3. 신체 기능의 6가지 기둥</h2>
+        <p class="text-slate-600 text-sm md:text-lg">
+            차트의 <strong>꼭짓점</strong>을 클릭하여 상세 정의를 확인하세요.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-start">
+        
+        <div class="lg:col-span-2 bg-white p-4 rounded-2xl shadow-lg border border-slate-100">
+            <div class="chart-container !h-[280px] md:!h-[400px]"> <canvas id="functionRadar"></canvas>
+            </div>
+        </div>
+
+        <div class="lg:col-span-1 space-y-3">
+            <div id="info-panel" class="bg-gradient-to-br from-teal-500 to-teal-600 text-white p-5 md:p-8 rounded-2xl shadow-md transition-all duration-300">
+                <div class="text-3xl md:text-5xl mb-2" id="info-icon">👆</div>
+                <h3 class="text-lg md:text-2xl font-bold mb-2" id="info-title">요소를 선택하세요</h3>
+                <p class="text-teal-50 text-xs md:text-base leading-snug" id="info-desc">
+                    왼쪽 차트의 포인트를 클릭하면 상세 내용이 표시됩니다.
                 </p>
             </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-                
-                <!-- Chart Container -->
-                <div class="lg:col-span-2 bg-white p-6 rounded-3xl shadow-xl border border-slate-100">
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="font-bold text-slate-700">Functional Elements Model</h3>
-                        <span class="text-xs text-slate-400 bg-slate-100 px-2 py-1 rounded">Interactive Chart</span>
-                    </div>
-                    
-                    <div class="chart-container">
-                        <canvas id="functionRadar"></canvas>
-                    </div>
-                </div>
-
-                <!-- Info Panel -->
-                <div class="lg:col-span-1 space-y-4">
-                    <div id="info-panel" class="bg-gradient-to-br from-teal-500 to-teal-600 text-white p-8 rounded-3xl shadow-lg transition-all duration-300 transform">
-                        <div class="text-5xl mb-4" id="info-icon">👆</div>
-                        <h3 class="text-2xl font-bold mb-3" id="info-title">요소를 선택하세요</h3>
-                        <p class="text-teal-50 leading-relaxed" id="info-desc">
-                            왼쪽 차트의 각 꼭짓점(Point)을 클릭하면 해당 기능 요소에 대한 상세한 정의와 임상적 의미가 이곳에 표시됩니다.
-                        </p>
-                    </div>
-                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 text-xs text-slate-500">
-                        <p><strong>Tip:</strong> 이 6가지 요소 중 하나라도 부족하면 전체적인 신체 기능(Function)이 저하될 수 있습니다.</p>
-                    </div>
-                </div>
+            <div class="bg-white p-3 rounded-xl border border-slate-100 text-[10px] md:text-xs text-slate-500 text-center">
+                6가지 요소는 상호작용하며 전체 기능을 형성합니다.
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
         <!-- Section 4: Clinical Reasoning Logic -->
         <section>
