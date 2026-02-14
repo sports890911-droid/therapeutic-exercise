@@ -92,21 +92,21 @@
     </div>
 
     <!-- Header / Hero Section -->
-    <header class="min-h-[60vh] flex flex-col justify-center items-center text-center px-4 py-20 bg-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-teal-50 to-indigo-50 z-0"></div>
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <span class="inline-block py-1 px-3 rounded-full bg-teal-100 text-teal-800 text-sm font-bold mb-4 tracking-wider">PHYSICAL THERAPY EDUCATION</span>
-            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
-                <span class="gradient-text">Therapeutic Exercise</span><br>
-                <span class="text-slate-700 text-3xl md:text-5xl">Definitions & Core Principles</span>
-            </h1>
-            <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-                단순한 '움직임'과 '치료'는 무엇이 다를까요?<br>
-                과학적 근거와 임상적 추론을 바탕으로 한 치료적 운동의 본질을 탐구합니다.
-            </p>
-            <div class="animate-bounce text-indigo-500 text-3xl">↓</div>
-        </div>
-    </header>
+<header class="min-h-[50vh] md:min-h-[60vh] flex flex-col justify-center items-center text-center px-4 py-12 md:py-20 bg-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-teal-50 to-indigo-50 z-0"></div>
+    <div class="relative z-10 max-w-4xl mx-auto">
+        <span class="inline-block py-1 px-3 rounded-full bg-teal-100 text-teal-800 text-[10px] md:text-sm font-bold mb-3 md:mb-4 tracking-wider">PHYSICAL THERAPY EDUCATION</span>
+        <h1 class="text-3xl md:text-7xl font-black mb-4 md:mb-6 leading-tight">
+            <span class="gradient-text">Therapeutic Exercise</span><br>
+            <span class="text-slate-700 text-xl md:text-5xl">Definitions & Core Principles</span>
+        </h1>
+        <p class="text-sm md:text-xl text-slate-600 max-w-2xl mx-auto mb-6 md:mb-10 leading-relaxed px-2">
+            단순한 '움직임'과 '치료'는 무엇이 다를까요?<br class="hidden md:block">
+            과학적 근거와 임상적 추론을 바탕으로 한 본질을 탐구합니다.
+        </p>
+        <div class="animate-bounce text-indigo-500 text-2xl md:text-3xl">↓</div>
+    </div>
+</header>
 
     <main class="max-w-7xl mx-auto px-4 py-12 space-y-24">
 
@@ -227,40 +227,44 @@
 </section>
 
         <!-- Section 4: Clinical Reasoning Logic -->
-        <section>
-            <div class="mb-10 text-center">
-                <h2 class="text-3xl font-bold text-slate-800 mb-4">4. Clinical Reasoning Process</h2>
-                <p class="text-slate-600 text-lg max-w-3xl mx-auto">
-                    치료적 운동의 핵심은 "무엇을 하느냐(What)"보다 <strong>"왜(Why) 그리고 어떻게(How)"</strong>에 있습니다. 성공적인 치료를 위한 논리적 흐름을 확인하세요.
-                </p>
-            </div>
+<section class="pb-12">
+    <div class="mb-8 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-2">4. Clinical Reasoning Process</h2>
+        <p class="text-slate-600 text-sm md:text-lg max-w-3xl mx-auto px-4">
+            치료적 운동의 핵심은 <strong>"왜(Why) 그리고 어떻게(How)"</strong>에 있습니다.
+        </p>
+    </div>
 
-            <div class="flex flex-col md:flex-row gap-6 justify-center items-stretch max-w-5xl mx-auto">
-                <!-- Step 1 -->
-                <div class="flex-1 bg-white p-6 rounded-2xl shadow-md border-b-4 border-slate-300 relative step-arrow md:mb-0 mb-8">
-                    <div class="text-slate-300 text-5xl font-black absolute top-4 right-4 opacity-20">01</div>
-                    <div class="text-2xl mb-3">🔎</div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-2">Assessment</h3>
-                    <p class="text-slate-600 text-sm">환자의 기능 장애를 정확히 평가하고 부족한 요소를 파악합니다.</p>
-                </div>
+    <div class="flex flex-col md:flex-row gap-4 justify-center items-center max-w-5xl mx-auto px-4">
+        
+        <div class="w-full flex-1 bg-white p-5 rounded-2xl shadow-md border-l-4 md:border-l-0 md:border-b-4 border-slate-300 relative group">
+            <div class="text-slate-200 text-4xl font-black absolute top-2 right-4 opacity-50">01</div>
+            <div class="text-2xl mb-2">🔎</div>
+            <h3 class="text-lg font-bold text-slate-800 mb-1">Assessment</h3>
+            <p class="text-slate-600 text-xs md:text-sm">환자의 기능 장애를 평가하고 부족한 요소를 파악합니다.</p>
+        </div>
 
-                <!-- Step 2 -->
-                <div class="flex-1 bg-white p-6 rounded-2xl shadow-md border-b-4 border-indigo-500 relative step-arrow md:mb-0 mb-8">
-                    <div class="text-indigo-200 text-5xl font-black absolute top-4 right-4 opacity-20">02</div>
-                    <div class="text-2xl mb-3">🧠</div>
-                    <h3 class="text-xl font-bold text-indigo-700 mb-2">Clinical Reasoning</h3>
-                    <p class="text-slate-600 text-sm">왜 이 문제가 발생했는지 추론하고, 6가지 요소 중 우선순위를 결정합니다.</p>
-                </div>
+        <div class="md:hidden text-slate-300 text-xl font-bold">↓</div>
+        <div class="hidden md:block text-slate-300 text-2xl font-bold">→</div>
 
-                <!-- Step 3 -->
-                <div class="flex-1 bg-white p-6 rounded-2xl shadow-md border-b-4 border-teal-500 relative">
-                    <div class="text-teal-200 text-5xl font-black absolute top-4 right-4 opacity-20">03</div>
-                    <div class="text-2xl mb-3">📝</div>
-                    <h3 class="text-xl font-bold text-teal-700 mb-2">Prescription</h3>
-                    <p class="text-slate-600 text-sm">과학적 근거(FITT)에 기반하여 맞춤형 운동의 강도와 빈도를 처방합니다.</p>
-                </div>
-            </div>
-        </section>
+        <div class="w-full flex-1 bg-white p-5 rounded-2xl shadow-md border-l-4 md:border-l-0 md:border-b-4 border-indigo-500 relative group">
+            <div class="text-indigo-100 text-4xl font-black absolute top-2 right-4 opacity-50">02</div>
+            <div class="text-2xl mb-2">🧠</div>
+            <h3 class="text-lg font-bold text-indigo-700 mb-1">Reasoning</h3>
+            <p class="text-slate-600 text-xs md:text-sm">문제 원인을 추론하고 치료 우선순위를 결정합니다.</p>
+        </div>
+
+        <div class="md:hidden text-slate-300 text-xl font-bold">↓</div>
+        <div class="hidden md:block text-slate-300 text-2xl font-bold">→</div>
+
+        <div class="w-full flex-1 bg-white p-5 rounded-2xl shadow-md border-l-4 md:border-l-0 md:border-b-4 border-teal-500 relative group">
+            <div class="text-teal-100 text-4xl font-black absolute top-2 right-4 opacity-50">03</div>
+            <div class="text-2xl mb-2">📝</div>
+            <h3 class="text-lg font-bold text-teal-700 mb-1">Prescription</h3>
+            <p class="text-slate-600 text-xs md:text-sm">과학적 근거(FITT)에 기반해 맞춤 운동을 처방합니다.</p>
+        </div>
+    </div>
+</section>
 
     </main>
 
