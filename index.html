@@ -215,30 +215,58 @@
             { label: "안정성", full: "안정성 (Stability)", icon: "🧱", desc: "움직임 중 관절을 정렬시키고 자세를 유지하는 능력입니다." }
         ];
 
-        window.onload = function() {
-            const ctx = document.getElementById('homeRadarChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'radar',
-                data: {
-                    labels: homeChartData.map(d => d.label),
-                    datasets: [{
-                        data: [10, 10, 10, 10, 10, 10],
-                        backgroundColor: 'rgba(13, 148, 136, 0.2)',
-                        borderColor: '#0d9488',
-                        borderWidth: 2,
-                        pointBackgroundColor: '#0d9488'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: { r: { suggestedMin: 0, suggestedMax: 10, ticks: { display: false } } },
-                    plugins: { legend: { display: false } },
-                    onClick: (e, el) => { if(el[0]) updateHomeInfo(el[0].index); }
-                }
-            });
-            toggleHomeStep('s1'); // 첫 단계 미리 열기
-        };
+window.onload = function() {
+    const ctx = document.getElementById('homeRadarChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: homeChartData.map(d => d.label),
+            datasets: [{
+                data: [10, 10, 10, 10, 10, 10],
+                backgroundColor: 'rgba(13, 148, 136, 0.2)',
+                borderColor: '#0d9488',
+                borderWidth: 2,
+                pointBackgroundColor: '#0d9488',
+                
+                // --- [클릭 인식 개선 핵심 설정] ---
+                pointRadius: 6,         // 평소 보이는 점 크기 (살짝 키움)
+                pointHoverRadius: 10,  // 마우스 올렸을 때 점 크기
+                pointHitRadius: 30,    // 중요! 점 주변 30px까지 클릭으로 인식
+                // -------------------------------
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            // 클릭 감지 모드를 '가장 가까운 항목'으로 설정
+            interaction: {
+                mode: 'nearest',
+                intersect: true,
+                axis: 'r'
+            },
+            scales: { 
+                r: { 
+                    suggestedMin: 0, 
+                    suggestedMax: 10, 
+                    ticks: { display: false },
+                    pointLabels: {
+                        font: { size: 12, weight: 'bold' } // 글자 클릭도 고려하여 라벨 크기 조절
+                    }
+                } 
+            },
+            plugins: { 
+                legend: { display: false },
+                tooltip: { enabled: false } // 커스텀 패널을 쓰므로 기본 툴팁은 끔
+            },
+            onClick: (e, el) => { 
+                if(el[0]) {
+                    updateHomeInfo(el[0].index);
+                } 
+            }
+        }
+    });
+    toggleHomeStep('s1');
+};
 
         function updateHomeInfo(idx) {
             const d = homeChartData[idx];
@@ -254,5 +282,6 @@
     </script>
 </body>
 </html>
+
 
 
