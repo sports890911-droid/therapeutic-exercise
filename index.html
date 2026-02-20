@@ -77,39 +77,32 @@
                 </div>
             </section>
 
-                        <section class="bg-slate-100 rounded-2xl p-6 border border-slate-200">
+            <section class="bg-slate-100 rounded-3xl p-6 border border-slate-200 shadow-inner">
                 <h2 class="text-lg font-bold mb-2 border-l-4 border-emerald-500 pl-3 text-slate-800">움직임을 위한 신체 요소</h2>
-                <p class="text-[11px] md:text-xs text-slate-500 mb-6 leading-relaxed">움직임은 우리 몸의 구조와 기능이 상호작용하여 나타나는 결과입니다. 아래 탭을 클릭하여 수동적 요소와 능동적 요소의 차이를 확인하세요.</p>
+                <p class="text-[11px] md:text-xs text-slate-500 mb-6 leading-relaxed">움직임은 우리 몸의 구조와 기능이 상호작용하여 나타나는 결과입니다. 아래 탭을 클릭해 차이를 확인하세요.</p>
 
                 <div class="flex space-x-2 mb-4">
-                    <button onclick="switchSubTab('structure')" id="sub-btn-structure" class="flex-1 py-3 rounded-lg text-xs font-bold transition-all bg-emerald-600 text-white shadow-md">신체 구조 (Structure)</button>
-                    <button onclick="switchSubTab('function')" id="sub-btn-function" class="flex-1 py-3 rounded-lg text-xs font-bold transition-all bg-white border border-slate-300 text-slate-500">신체 기능 (Function)</button>
+                    <button onclick="switchSubTab('structure')" id="sub-btn-structure" class="flex-1 py-3 rounded-xl text-xs font-bold transition-all bg-emerald-600 text-white shadow-lg">신체 구조 (Structure)</button>
+                    <button onclick="switchSubTab('function')" id="sub-btn-function" class="flex-1 py-3 rounded-xl text-xs font-bold transition-all bg-white border border-slate-300 text-slate-500">신체 기능 (Function)</button>
                 </div>
 
-                <div id="sub-content-structure" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm animate-fade-in">
-                    <div class="flex items-center space-x-2 mb-3">
-                        <span class="text-lg">🏗️</span>
-                        <h3 class="font-bold text-sm text-emerald-800">신체 구조 (Physical Structure)</h3>
-                    </div>
-                    <p class="text-xs text-slate-600 mb-4 bg-emerald-50 p-2 rounded"><strong>정의:</strong> 해부학적 구조물로, 움직임에 <strong>수동적(Passive)</strong>인 영향을 미칩니다.</p>
+                <div id="sub-content-structure" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm transition-all">
+                    <h3 class="font-bold text-sm text-emerald-800 mb-2">🏗️ 신체 구조 (Physical Structure)</h3>
+                    <p class="text-xs text-slate-600 mb-4 italic">해부학적 구조물로, 움직임에 수동적(Passive)인 영향을 미칩니다.</p>
                     <div class="grid grid-cols-2 gap-2 text-center">
-                        <div class="p-2 bg-slate-50 rounded border border-slate-100"><div class="font-bold text-xs text-slate-700">뼈</div><div class="text-[9px] text-slate-400">Frame & Lever</div></div>
-                        <div class="p-2 bg-slate-50 rounded border border-slate-100"><div class="font-bold text-xs text-slate-700">연골</div><div class="text-[9px] text-slate-400">Protection</div></div>
-                        <div class="p-2 bg-slate-50 rounded border border-slate-100"><div class="font-bold text-xs text-slate-700">관절주머니</div><div class="text-[9px] text-slate-400">Stability & Extensibility</div></div>
-                        <div class="p-2 bg-slate-50 rounded border border-slate-100"><div class="font-bold text-xs text-slate-700">인대</div><div class="text-[9px] text-slate-400">Limit Motion</div></div>
+                        <div class="p-3 bg-emerald-50 rounded-lg border border-emerald-100"><div class="font-bold text-xs text-emerald-900">뼈</div><div class="text-[9px] text-emerald-600">frame & lever</div></div>
+                        <div class="p-3 bg-emerald-50 rounded-lg border border-emerald-100"><div class="font-bold text-xs text-emerald-900">연골</div><div class="text-[9px] text-emerald-600">Protection</div></div>
+                        <div class="p-3 bg-emerald-50 rounded-lg border border-emerald-100"><div class="font-bold text-xs text-emerald-900">관절주머니</div><div class="text-[9px] text-emerald-600">Stability & Extensibility</div></div>
+                        <div class="p-3 bg-emerald-50 rounded-lg border border-emerald-100"><div class="font-bold text-xs text-emerald-900">인대</div><div class="text-[9px] text-emerald-600">Limit Motion</div></div>
                     </div>
                 </div>
 
-                <div id="sub-content-function" class="hidden bg-white p-5 rounded-xl border border-slate-200 shadow-sm animate-fade-in">
-                    <div class="flex items-center space-x-2 mb-3">
-                        <span class="text-lg">⚡</span>
-                        <h3 class="font-bold text-sm text-indigo-800">신체 기능 (Physical Function)</h3>
-                    </div>
-                    <p class="text-xs text-slate-600 mb-4 bg-indigo-50 p-2 rounded">에너지를 사용하여 움직임을 생성하고 조절하는 <strong>능동적(Active)</strong> 요소입니다.</p>
+                <div id="sub-content-function" class="hidden bg-white p-5 rounded-2xl border border-slate-200 shadow-sm transition-all">
+                    <h3 class="font-bold text-sm text-indigo-800 mb-3">⚡ 신체 기능 (Physical Function)</h3>
                     <div class="space-y-2">
-                        <div class="flex justify-between p-3 bg-indigo-50/50 rounded border border-indigo-100"><span class="font-bold text-xs text-indigo-900">신경계</span><span class="text-[10px] text-indigo-600">감각 입력 & 운동 출력</span></div>
-                        <div class="flex justify-between p-3 bg-indigo-50/50 rounded border border-indigo-100"><span class="font-bold text-xs text-indigo-900">근육계</span><span class="text-[10px] text-indigo-600">수축성 & 신장성</span></div>
-                        <div class="flex justify-between p-3 bg-indigo-50/50 rounded border border-indigo-100"><span class="font-bold text-xs text-indigo-900">심폐계</span><span class="text-[10px] text-indigo-600">환기 & 순환</span></div>
+                        <div class="flex justify-between p-3 bg-indigo-50 rounded-lg border border-indigo-100"><span class="font-bold text-xs text-indigo-900">신경계</span><span class="text-[10px] text-indigo-600 font-medium">감각 입력 & 운동 출력</span></div>
+                        <div class="flex justify-between p-3 bg-indigo-50 rounded-lg border border-indigo-100"><span class="font-bold text-xs text-indigo-900">근육계</span><span class="text-[10px] text-indigo-600 font-medium">수축성 & 신장성</span></div>
+                        <div class="flex justify-between p-3 bg-indigo-50 rounded-lg border border-indigo-100"><span class="font-bold text-xs text-indigo-900">심폐계</span><span class="text-[10px] text-indigo-600 font-medium">환기 & 순환</span></div>
                     </div>
                 </div>
             </section>
@@ -261,4 +254,5 @@
     </script>
 </body>
 </html>
+
 
